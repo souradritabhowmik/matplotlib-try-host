@@ -180,7 +180,7 @@ with tab2:
     sliders = {}
     for i, pname in enumerate(param_names):
         if pname in ["loc"]:
-        sliders[pname] = st.slider(f"{pname}", float(data.min()-10), float(data.max()+10), float(default_params[i]))
+            sliders[pname] = st.slider(f"{pname}", float(data.min()-10), float(data.max()+10), float(default_params[i]))
     elif pname in ["scale", "b", "a", "shape"]:
         sliders[pname] = st.slider(f"{pname}", 0.01, 50.0, float(default_params[i]) if i < len(default_params) else 1.0, 0.01)
 
